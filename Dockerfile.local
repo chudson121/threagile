@@ -28,7 +28,7 @@ RUN GOOS=linux go build -a -trimpath -ldflags="-s -w -X main.buildTimestamp=$(da
 ######
 ## Stage 3: Make final small image
 ######
-FROM alpine
+FROM alpine:3.15.3
 
 # label used in other scripts to filter
 LABEL type="threagile"
